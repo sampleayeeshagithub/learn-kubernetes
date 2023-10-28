@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: frontend
-      image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/frontend:3.0.1
+      image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/frontend:3.0.2
   imagePullSecrets:
     - name: aws-ecr
 ---
@@ -35,8 +35,8 @@ spec:
     - name: backend
       image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/backend:3.0.0
       env:
-        - name: DB_HOST
-          value: mysql
+#        - name: DB_HOST
+#          value: mysql
   imagePullSecrets:
     - name: aws-ecr
 ---
@@ -77,3 +77,6 @@ spec:
     - protocol: TCP
       port: 3306
       targetPort: 3306
+
+
+
