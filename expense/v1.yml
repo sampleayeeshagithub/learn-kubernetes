@@ -92,7 +92,7 @@ spec:
         - name: schema
           image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/expense-schema-load:6.0.1
           env:
-          - name: DB_HOST
+          - name: DBHOST
             value: mysql
           - name: DBPASS
             value: "ExpenseApp@1"
