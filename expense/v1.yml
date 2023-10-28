@@ -39,7 +39,6 @@ spec:
           value: mysql
   imagePullSecrets:
     - name: aws-ecr
-
 ---
 apiVersion: v1
 kind: Service
