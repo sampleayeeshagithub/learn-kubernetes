@@ -36,7 +36,7 @@ spec:
       image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/backend:5.0.1
       env:
         - name: DB_HOST
-          value: mysql
+          value: prod-mysql.cluster-cmzmzlxo5mcv.us-east-1.rds.amazonaws.com
   imagePullSecrets:
     - name: aws-ecr
 ---
