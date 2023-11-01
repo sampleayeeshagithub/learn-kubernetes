@@ -10,6 +10,7 @@ spec:
       volumeMounts:
       - mountPath: /parameters
         name: temp
+  containers:
     - name: con2
       image: centos
       command: ["tail", "-f", "/dev/null"]
