@@ -46,7 +46,7 @@ metadata:
     app: backend
 spec:
   serviceAccountName: backend
-  intContainers:
+  initContainers:
     - name: aws-param
       image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/expense-parameter-init-container:5.0.1
       env:
