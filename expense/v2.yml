@@ -16,8 +16,7 @@ spec:
   containers:
     - name: frontend
       image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/frontend:5.0.0
-  imagePullSecrets:
-    - name: aws-ecr
+
 ---
 apiVersion: v1
 kind: Service
@@ -50,11 +49,6 @@ spec:
   containers:
     - name: backend
       image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/backend:5.0.1
-      env:
-        - name: DB_HOST
-          value: prod-mysql.cluster-cmzmzlxo5mcv.us-east-1.rds.amazonaws.com
-  imagePullSecrets:
-    - name: aws-ecr
 ---
 apiVersion: v1
 kind: Service
@@ -83,18 +77,10 @@ spec:
   template:
     spec:
       serviceAccountName: schema
-      imagePullSecrets:
-        - name: aws-ecr
       restartPolicy: Never
       containers:
         - name: schema
           image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/expense-schema-load:6.0.2
           env:
-            - name: DBHOST
-              value: prod-mysql.cluster-cmzmzlxo5mcv.us-east-1.rds.amazonaws.com
-            - name: DBPASS
-              value: "expenseprod1234"
-            - name: DBUSER
-              value: mysqlrdsadmin
             - name: COMPONENT
               value: backend
