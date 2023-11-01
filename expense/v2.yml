@@ -57,7 +57,7 @@ spec:
         name: config
   containers:
     - name: backend
-      image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/backend:5.0.5
+      image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/backend:5.0.6
       volumeMounts:
       - mountPath: /config
         name: config
@@ -106,7 +106,7 @@ spec:
           name: config
       containers:
       - name: schema
-        image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/expense-schema-load:6.0.5
+        image: 299627189740.dkr.ecr.us-east-1.amazonaws.com/expense-schema-load:6.0.6
         env:
         - name: COMPONENT
           value: backend
