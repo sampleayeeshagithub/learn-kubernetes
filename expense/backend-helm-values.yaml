@@ -1,5 +1,7 @@
 appName: backend
 appVersion: 5.0.6
+replicas: 2
+
 service:
   type: ClusterIP
   port: 80
