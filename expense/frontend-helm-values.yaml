@@ -1,0 +1,6 @@
+appName: frontend
+appVersion: 5.0.0
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 80
